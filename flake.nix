@@ -42,6 +42,10 @@
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wrangler = {
+        url = "github:emrldnix/wrangler";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {

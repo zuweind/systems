@@ -25,6 +25,9 @@
     google-chrome
     zoom-us
     rustdesk
+    droidcam
+    obs-studio-plugins.droidcam-obs
+    haruna
     # bottles-unwrapped
     # lutris-unwrapped
   ];

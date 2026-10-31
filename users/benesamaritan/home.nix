@@ -57,11 +57,13 @@
                 "https://devenv.cachix.org"
                 "https://catppuccin.cachix.org"
                 "https://cache.forall.systems"
+                "https://cache.ryand.ca"
             ];
             "extra-trusted-public-keys" = [
                 "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
                 "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU="
                 "cache.forall.systems:5PmD7QO4MSF8YgyRZtkSGXRDo96H3bybIf2SsQh8ScI="
+                "ryandcache:H6aJbZCm8sAoMXCB9XbLAJb/ZamM6AY5Ns/QYGimOek="
             ];
         };
     };
@@ -69,9 +71,10 @@
     programs.git = {
         settings = {
             user = {
-                name = "benesamaritan";
-                email = "243715333+benesamaritan@users.noreply.github.com";
+                name = "ginaze";
+                email = "243715333+ginaze@users.noreply.github.com";
             };
+            init.defaultBranch = "main";
             submodule.recurse = true;
             commit.gpgSign = true;
         };

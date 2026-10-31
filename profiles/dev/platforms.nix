@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -8,6 +9,7 @@
   home.packages = with pkgs; [
     hub
     gh
+    inputs.wrangler.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.opencode = {

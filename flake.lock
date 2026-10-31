@@ -409,6 +409,7 @@
         "nix4vscode": "nix4vscode",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable",
+        "wrangler": "wrangler",
         "zen-browser": "zen-browser"
       }
     },
@@ -509,6 +510,26 @@
       "original": {
         "owner": "ElementalWarrior",
         "repo": "wine-wintypes.dll-for-affinity",
+        "type": "github"
+      }
+    },
+    "wrangler": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793305164,
+        "narHash": "sha256-7eUakqesZMMshiBcxHpDt8ljGZKxQ2TQ+C8PYX8H1sg=",
+        "owner": "emrldnix",
+        "repo": "wrangler",
+        "rev": "48326130bd1f24ab3b3d4de731e8ed05fbb90d65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emrldnix",
+        "repo": "wrangler",
         "type": "github"
       }
     },
