@@ -6,7 +6,7 @@
 
 - [] fix manix not able to look up home manager option and exclude nix darwin option search
 - [] nixfmt . : Passing directories or non-Nix files (such as ".") is deprecated and will be unsupported soon. Please use the `pkgs.nixfmt-tree` wrapper instead, or https://github.com/numtide/treefmt-nix for more flexibility
-- [] nix shell : error: flake 'git+file:///home/benesamaritan/repos/benesamaritan/nixconfig' does not provide attribute 'packages.x86_64-linux.default' or 'defaultPackage.x86_64-linux'
+- [] nix shell : error: flake 'git+file:///home/benesamaritan/repos/benesamaritan/systems' does not provide attribute 'packages.x86_64-linux.default' or 'defaultPackage.x86_64-linux'
 - [] Add missing flake outputs: `packages.x86_64-linux.default`, `devShells`, `checks` (flake.nix outputs section)
 
 ### High Priority — Development Environment
@@ -27,7 +27,7 @@
           │ download 'https://cache.nixos.org/ii4qmrgm0vkl3z7rnb9ilyx55xhv693f.narinfo': Could not connect to server (7)
           │ Failed to connect to cache.nixos.org port 443 after 27 ms: Could not connect to server
     - ❯ nix develop
-        warning: Git tree '/home/benesamaritan/repos/benesamaritan/nixconfig' is dirty
+        warning: Git tree '/home/benesamaritan/repos/benesamaritan/systems' is dirty
         evaluation warning: lib.cli.toGNUCommandLineShell is deprecated, please use lib.cli.toCommandLineShell or lib.cli.toCommandLineShellGNU instead.
         evaluation warning: lib.cli.toGNUCommandLine is deprecated, please use lib.cli.toCommandLine or lib.cli.toCommandLineShellGNU instead.
         warning: error: unable to download 'https://devenv.cachix.org/igs4gm4zi3sfydbl9216f0kb1mgsk5r0.narinfo': Could not connect to server (7) Failed to connect to devenv.cachix.org port 443 after 317 ms: Could not connect to server; retrying in 295 ms

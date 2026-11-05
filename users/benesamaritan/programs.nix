@@ -14,6 +14,7 @@
   };
 
   programs = {
+    gpg.enable = true;
     bash.enable = true;
     git.enable = true;
     nh.enable = true;
@@ -33,6 +34,7 @@
     rofi.enable = true;
     zen-browser.enable = true;
     helium.enable = true;
+    feh.enable = true;
   };
 
   programs = {

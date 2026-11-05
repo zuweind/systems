@@ -46,6 +46,7 @@
         url = "github:emrldnix/wrangler";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    flyline.url = "github:HalFrgrd/flyline";
   };
 
   outputs = inputs @ {

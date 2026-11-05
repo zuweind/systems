@@ -1,4 +1,5 @@
 {
+    config,
     lib,
     inputs,
     username,
@@ -29,9 +30,23 @@
         path = lib.mkDefault "$HOME/.config/home-manager";
     };
 
+    services.home-manager = {
+        autoExpire = {
+            enable = true;
+            frequency = "monthly";
+        };
+        autoUpgrade = {
+            enable = true;
+            frequency = "weekly";
+            useFlake = true;
+            preSwitchCommands = [];
+            flakeDir = "/home/${username}/repos/${username}/systems";
+        };
+    };
+
     home = {
         stateVersion = "25.05";
-        username = username;
+        username = "${username}";
         homeDirectory = "/home/${username}";
         shell.enableShellIntegration = true;
         overwriteBackup = true;
@@ -47,7 +62,7 @@
             TERMINAL = "alacritty";
             BROWSER = "zen";
             PATH = "$XDG_STATE_HOME/nix/profile/bin:$PATH";
-            GNUPGHOME = "$HOME/.local/share/gnupg";
+            GNUPGHOME = lib.mkDefault "$HOME/.local/share/gnupg";
         };
         file.".config/nixpkgs/config.nix".text = ''
             { allowUnfree = true; }
@@ -71,8 +86,8 @@
     programs.git = {
         settings = {
             user = {
-                name = "ginaze";
-                email = "243715333+ginaze@users.noreply.github.com";
+                name = "zuweind";
+                email = "243715333+zuweind@users.noreply.github.com";
             };
             init.defaultBranch = "main";
             submodule.recurse = true;
@@ -83,4 +98,6 @@
             signByDefault = true;
         };
     };
+
+    programs.gpg.homedir = lib.mkForce "${config.home.homeDirectory}/.local/share/gnupg";
 }

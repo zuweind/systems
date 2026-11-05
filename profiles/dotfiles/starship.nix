@@ -4,9 +4,10 @@
     enableBashIntegration = true;
     settings = {
       "$schema" = "https://starship.rs/config-schema.json";
-      format = "$all";
+      format = "$all$directory$character";
+      right_format = "$username$git_branch$git_status";
       palette = "catppuccin_mocha";
-      command_timeout = 3600;
+      command_timeout = 360;
 
       palettes.catppuccin_mocha = {
         rosewater = "#f5e0dc";
@@ -37,24 +38,36 @@
         crust = "#11111b";
       };
 
-      os.disabled = false;
-      username.show_always = true;
+      os.disabled = true;
+      username.show_always = false;
 
       directory = {
         home_symbol = "󱂵 ";
         read_only = " 󰌾 ";
-        format = " [$path]($style) ";
-        truncation_length = 5;
-        truncation_symbol = "…/";
+        format = "[$path]($style)";
+        # truncation_length = 1;
+        # truncation_symbol = "…/";
         fish_style_pwd_dir_length = 2;
         substitutions = {
           "Documents" = "󰈙 ";
           "Downloads" = " ";
           "Music" = "󰝚 ";
           "Pictures" = " ";
-          "Developer" = "󰲋 ";
+          "Graphics" = "󰋰 ";
+          "Videos" = "󰃽 ";
+          "repos" = " ";
         };
       };
+
+      memory_usage.symbol = "󰍛 ";
+      hostname.ssh_symbol = "󰖟 ";
+      package.symbol = "󰏗 ";
+      status.symbol = " ";
+      git_branch = {
+        symbol = " ";
+        format = "[$symbol$branch](bold fg:pink) ";
+      };
+      git_commit.tag_symbol = "  ";
 
       direnv.disabled = false;
       line_break.disabled = false;
@@ -65,47 +78,41 @@
         vimcmd_symbol = "[❮](bold fg:green)";
         vimcmd_replace_one_symbol = "[❮](bold fg:lavender)";
         vimcmd_replace_symbol = "[❮](bold fg:lavender)";
-        vimcmd_visual_symbol = "[❮](bold fg:yellow)";
+        vimcmd_visual_symbol = "[❮](bold fg:lavender)";
       };
 
-      cmd_duration = {
-        disabled = false;
-        show_milliseconds = false;
-        show_notifications = false;
-        format = " in [$duration](bold yellow) ";
-      };
+      # cmd_duration = {
+      #   disabled = true;
+      #   show_milliseconds = false;
+      #   show_notifications = false;
+      #   format = " [$duration](bold yellow) ";
+      # };
 
       bun.symbol = " ";
       c.symbol = " ";
       cmake.symbol = " ";
       dart.symbol = " ";
-      docker_context.symbol = " ";
+      docker_context.symbol = " ";
       elixir.symbol = " ";
       fossil_branch.symbol = " ";
-      git_branch.symbol = " ";
-      git_commit.tag_symbol = "  ";
       golang.symbol = " ";
       gradle.symbol = " ";
-      guix_shell.symbol = " ";
       hg_branch.symbol = " ";
-      hostname.ssh_symbol = " ";
       java.symbol = " ";
       kotlin.symbol = " ";
       lua.symbol = " ";
-      memory_usage.symbol = "󰍛 ";
       meson.symbol = "󰔷 ";
       nim.symbol = "󰆥 ";
       nix_shell.symbol = " ";
       nodejs.symbol = " ";
-      package.symbol = "󰏗 ";
       php.symbol = " ";
       python.symbol = " ";
       rlang.symbol = "󰟔 ";
       rust.symbol = "󱘗 ";
-      status.symbol = " ";
       swift.symbol = " ";
 
       os.symbols = {
+        Unknown = " ";
         Alpine = " ";
         Arch = " ";
         CachyOS = " ";
@@ -113,16 +120,13 @@
         Fedora = " ";
         FreeBSD = " ";
         Gentoo = " ";
-        Ios = "󰀷 ";
-        Linux = " ";
-        Mabox = " ";
+        Linux = " ";
         Macos = " ";
-        Mint = " ";
+        Mint = "󰣭 ";
         NixOS = " ";
         Nobara = " ";
         RockyLinux = " ";
-        Ubuntu = " ";
-        Unknown = " ";
+        Ubuntu = " ";
         Void = " ";
         Windows = "󰍲 ";
         Zorin = " ";

@@ -6,27 +6,27 @@
 {
   home.packages = with pkgs; [
     # Terminal toys (no Home Manager modules)
-    pipes-rs                    # Pipes Screensaver like on Classic Windows (Rust rewrite variant)
-    cmatrix                     # Matrix-like Screensaver
+    # pipes-rs                    # Pipes Screensaver like on Classic Windows (Rust rewrite variant)
+    # cmatrix                     # Matrix-like Screensaver
     ttyper
     navi                        # Cheatsheets
 
     # Disk utilities
-    disktui                     # Disk utility
+    # disktui                     # Disk utility
     ncdu                        # Disk usage analyzer
 
     # Desktop apps (no Home Manager modules; source priority:
     # nixpkgs > flake > flatpark > flathub > bun > npm — see AGENTS.md)
     qbittorrent
     kanata
-    protonup-qt
+    # protonup-qt
     inkscape
-    kdePackages.kdenlive
-    google-chrome
-    zoom-us
-    rustdesk
-    droidcam
-    obs-studio-plugins.droidcam-obs
+    # kdePackages.kdenlive
+    # google-chrome
+    # zoom-us
+    # rustdesk
+    # droidcam
+    # obs-studio-plugins.droidcam-obs
     haruna
     # bottles-unwrapped
     # lutris-unwrapped
